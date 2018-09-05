@@ -4,8 +4,6 @@
 # Deadline by Friday 9/7/18
 # Complete Art deadline by 9/10/18
 # Noted on 9/5/18
-init python:
-    import unicodedata
 define y = Character("[name]")
 define bs = Character("Dava")
 define gs = Character("Ysa")
