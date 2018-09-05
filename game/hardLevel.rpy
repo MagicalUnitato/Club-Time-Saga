@@ -95,11 +95,23 @@ label hardQuestions:
         if quiz_length > 0:
             jump quizH_game
     "The result is [quizPointsH]"
-    jump testLanderH
+    if quizPointsM > 6:
+        jump testLanderH
+    else:
+        if gender == "male" :
+            jump failThirdB
+        elif gender == "female":
+            jump failThirdG
 label noAnswerH: #receives if time has run out
     "You didn't answer in time, lets move on to the next question"
     $ quiz_length -= 1 #subtracts from quiz_length
     if quiz_length > 0: #loops if quiz length is not 0
         jump quizH_game
     "Your score is: [quizPointsH]"
-    jump testLanderH
+    if quizPointsM > 6:
+        jump testLanderH
+    else:
+        if gender == "male" :
+            jump failThirdB
+        elif gender == "female":
+            jump failThirdG

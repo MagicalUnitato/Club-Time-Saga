@@ -88,7 +88,6 @@ label bFirst:
     y "Oh, okay."
     bs "So the first question is..."
     jump easyQuestions
-
 label gFirst:
     show nrm opn secg
     with fade
@@ -131,7 +130,6 @@ menu:
         y "Excuse me, Beatrice."
         "*said girl looks up towards you"
         hide hpy clse secb dissolve
-        hide sad clse secb dissolve
         show hpy clse vpg
         with fade
         gvp "Oh hello! I guess you know my name from Ysa."
@@ -151,8 +149,7 @@ menu:
         "*walks over to said girl who is busy arranging some papers on the table*"
         y "Excuse me, Beatrice."
         "*said girl looks up towards you"
-        hide nrm clse secb dissolve
-        hide sad clse secb dissolve
+        hide hpy clse secb dissolve
         show nrm clse vpg
         with fade
         gvp "Oh hello! I guess you know my name from Ysa."
@@ -353,3 +350,9 @@ menu:
         y "Uhm, it's nice to see you putting yourself in high regard?"
         bp "Yep! Now, let us start with the first question..."
         jump hardQuestions
+label failThirdG:
+    y "placeholder girl"
+    jump testLanderH
+label failThirdB:
+    y "placeholder boi"
+    jump testLanderH

@@ -95,17 +95,29 @@ label mediumQuestions:
         if quiz_length > 0:
             jump quizm_game
     "The result is [quizPointsM]"
-    if gender == "male" :
-        jump bThird
-    elif gender == "female":
-        jump gThird
+    if quizPointsM > 6:
+        if gender == "male" :
+            jump bThird
+        elif gender == "female":
+            jump gThird
+    else:
+        if gender == "male" :
+            jump failSecondB
+        elif gender == "female":
+            jump failSecondG
 label noAnswerM: #receives if time has run out
     "You didn't answer in time, lets move on to the next question"
     $ quiz_length -= 1 #subtracts from quiz_length
     if quiz_length > 0: #loops if quiz length is not 0
         jump quizm_game
     "Your score is: [quizPointsM]"
-    if gender == "male" :
-        jump bThird
-    elif gender == "female":
-        jump gThird
+    if quizPointsM > 6:
+        if gender == "male" :
+            jump bThird
+        elif gender == "female":
+            jump gThird
+    else:
+        if gender == "male" :
+            jump failSecondB
+        elif gender == "female":
+            jump failSecondG

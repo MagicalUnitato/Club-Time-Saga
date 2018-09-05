@@ -111,9 +111,9 @@ label easyQuestions:
             jump gSecond
     else:
         if gender == "male" :
-            jump failFirstG
-        elif gender == "female":
             jump failFirstB
+        elif gender == "female":
+            jump failFirstG
 label noAnswer: #receives if time has run out
     "You didn't answer in time, lets move on to the next question"
     $ quiz_length -= 1 #subtracts from quiz_length
@@ -127,6 +127,6 @@ label noAnswer: #receives if time has run out
             jump gSecond
     else:
         if gender == "male" :
-            jump failFirstG
-        elif gender == "female":
             jump failFirstB
+        elif gender == "female":
+            jump failFirstG
