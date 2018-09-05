@@ -14,12 +14,14 @@ define gp = Character("Ella")
 define p = Character("President")
 define t = Character("Teacher")
 define a = Character("Alone")
+image test movie = Movie(channel="test", play="images/clock.webm")
 label start:
     stop music
     "*alarm rings*"
     "*wakes up*"
     "Oh no! I'm late for school"
 label school:
+    scene schoolInit
     t "You! New Comer! You're late! What's your name?"
     $ name = renpy.input("I'm")
     $ name = name.strip()
@@ -37,12 +39,14 @@ menu:
         $ gender = "female"
         jump watchFF
 label watchFF:
+    scene test movie
     ## show fast forward watch here
     y "I can't believe that I have Pre-Calculus as a last subject."
     y "Ughh."
     y "That was the most exhausting experience of my life! And NOW, I have to attend club."
     y "Crap! I still have to find the club room."
 label clubTime:
+    scene clubTime
     ## club time animation
     if gender == "male":
         show nrm opn presb
@@ -77,6 +81,7 @@ label clubFill2:
         jump gFirst
 
 label bFirst:
+    scene bFirst
     show nrm opn secb
     with fade
     bs "Hi [name]."
@@ -87,6 +92,7 @@ label bFirst:
     bs "So the first question is..."
     jump easyQuestions
 label gFirst:
+    scene gFirst
     show nrm opn secg
     with fade
     y "Hello, I'm..."
@@ -105,8 +111,8 @@ label failFirstB:
     y "placeholder boi"
     jump bSecond
 label gSecond:
+    scene gSecond
     show hpy clse secg
-    hide nrm opn secg
     with fade
     gs "Wow [name], I actually didn't expect you to make it to the next round!"
     y "That's a compliment coming from you."
