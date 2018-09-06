@@ -81,7 +81,6 @@ label clubFill2:
         jump bFirst
     elif gender == "female":
         jump gFirst
-
 label bFirst:
     scene bFirst
     show nrm opn secb

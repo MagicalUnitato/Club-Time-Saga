@@ -17,11 +17,6 @@ label easyQuestions:
         {"question": "What kind of device is Monitor?" , "answer" : [["Output" , "right"] , ["Input" , "wrong"] , ["Semi-Input" , "wrong"] ,["Semi-Output" , "wrong"]]},
         {"question": "In internet terminology IP means" , "answer" : [["Internet Protocol" , "right"] , ["Internet Password" , "wrong"] , ["Internet Pseudocode" , "wrong"] ,["Internet Passcode" , "wrong"]]},
         {"question": "In which field the expert system has application areas of A.I?" , "answer" : [["Artificial Intelligence" , "right"] , ["Robotics" , "wrong"] , ["Hardware Components" , "wrong"] ,["Computer Coding" , "wrong"]]},
-        {"question": "What does www stand for?" , "answer" : [["World Wide Web" , "right"] , ["World Widing Words" , "wrong"] , ["Wide Words Widen" , "wrong"] ,["Words Webbed Widen" , "wrong"]]},
-        {"question": "It is a software program that acts as an interface between the user and the WWW. What is it?" , "answer" : [["Web Browser" , "right"] , ["Search Engine" , "wrong"] , ["Web Interface" , "wrong"] ,["User Interface" , "wrong"]]},
-        {"question": "What do you call to a network service that enables users to send and receive messages?" , "answer" : [["Electronic Mail" , "right"] , ["URL" , "wrong"] , ["Servers" , "wrong"] ,["Electronic Portals" , "wrong"]]},
-        {"question": "What do you call to the addressing scheme used to link resources on the web?" , "answer" : [["URL" , "right"] , ["Electronic Mail" , "wrong"] , ["Servers" , "wrong"] ,["Electronic Portals" , "wrong"]]},
-        {"question": "What is the world’s of largest computer network, the ‘networks of networks’ scattered all over the world?" , "answer" : [["Internet" , "right"] , ["Intranet" , "wrong"] , ["Extranet" , "wrong"] ,["Macronet" , "wrong"]]},
     ]
 
     $ quizPointsE = 0
