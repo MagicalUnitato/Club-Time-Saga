@@ -20,7 +20,7 @@ label mediumQuestions:
     ]
 
     $ quizPointsM = 0
-    $ quiz_length = 15
+    $ quiz_length = 10 # number of questions to ask
     $ answer_length = 4
     $ q_ask = []
     $ a_ask = []

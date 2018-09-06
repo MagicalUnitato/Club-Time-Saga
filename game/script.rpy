@@ -14,7 +14,7 @@ define gp = Character("Ella")
 define p = Character("President")
 define t = Character("Teacher")
 define a = Character("Alone")
-image test movie = Movie(channel="test", play="images/clock.webm")
+image test movie = Movie(channel="test", play="images/clock.mkv", mask="images/clock.mkv", delay=30)
 label start:
     stop music
     "*alarm rings*"
@@ -30,8 +30,8 @@ label school:
         $ name = renpy.input("I'm")
     y "I apologize for being late Sir."
     t "Since it's the first day, you're excused."
-    "Choose your preference:"
 menu:
+    "Choose your preference:"
     "Boy":
         $ gender = "male"
         jump watchFF
@@ -40,14 +40,16 @@ menu:
         jump watchFF
 label watchFF:
     scene test movie
-    ## show fast forward watch here
+    with fade
+    "The day passes by quickly"
+    scene hallway
+    with fade
     y "I can't believe that I have Pre-Calculus as a last subject."
     y "Ughh."
     y "That was the most exhausting experience of my life! And NOW, I have to attend club."
     y "Crap! I still have to find the club room."
 label clubTime:
     scene clubTime
-    ## club time animation
     if gender == "male":
         show nrm opn presb
         with fade

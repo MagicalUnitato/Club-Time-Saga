@@ -20,7 +20,7 @@ label hardQuestions:
     ]
 
     $ quizPointsH = 0
-    $ quiz_length = 20
+    $ quiz_length = 10 # number of questions to ask
     $ answer_length = 4
     $ q_ask = []
     $ a_ask = []

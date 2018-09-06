@@ -1,48 +1,20 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 44, in script
-    y "I can't believe that I have Pre-Calculus as a last subject."
-  File "renpy/common/000window.rpy", line 98, in _window_auto_callback
-    _window_show()
-  File "renpy/common/000window.rpy", line 60, in _window_show
-    renpy.with_statement(trans)
-Exception: Backslash in filename, use '/' instead: u'images\\clock.mp4'
+  File "game/hardLevel.rpy", line 28, in script
+    while len(q_ask) < quiz_length:
+Exception: Possible infinite loop.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 44, in script
-    y "I can't believe that I have Pre-Calculus as a last subject."
-  File "D:\Python Stuff\renpy-7.0.0-sdk\renpy\ast.py", line 618, in execute
-    statement_name("say")
-  File "D:\Python Stuff\renpy-7.0.0-sdk\renpy\ast.py", line 43, in statement_name
-    i(name)
-  File "renpy/common/000window.rpy", line 98, in _window_auto_callback
-    _window_show()
-  File "renpy/common/000window.rpy", line 60, in _window_show
-    renpy.with_statement(trans)
-  File "D:\Python Stuff\renpy-7.0.0-sdk\renpy\exports.py", line 1452, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-  File "D:\Python Stuff\renpy-7.0.0-sdk\renpy\display\core.py", line 2207, in do_with
-    clear=clear)
-  File "D:\Python Stuff\renpy-7.0.0-sdk\renpy\display\core.py", line 2649, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "D:\Python Stuff\renpy-7.0.0-sdk\renpy\display\core.py", line 3318, in interact_core
-    renpy.audio.audio.periodic()
-  File "D:\Python Stuff\renpy-7.0.0-sdk\renpy\audio\audio.py", line 988, in periodic_thread_main
-    periodic_pass()
-  File "D:\Python Stuff\renpy-7.0.0-sdk\renpy\audio\audio.py", line 932, in periodic_pass
-    c.periodic()
-  File "D:\Python Stuff\renpy-7.0.0-sdk\renpy\audio\audio.py", line 416, in periodic
-    topf = load(self.file_prefix + filename + self.file_suffix)
-  File "D:\Python Stuff\renpy-7.0.0-sdk\renpy\audio\audio.py", line 69, in load
-    rv = renpy.loader.load(fn)
-  File "D:\Python Stuff\renpy-7.0.0-sdk\renpy\loader.py", line 546, in load
-    raise Exception("Backslash in filename, use '/' instead: %r" % name)
-Exception: Backslash in filename, use '/' instead: u'images\\clock.mp4'
+  File "game/hardLevel.rpy", line 28, in script
+    while len(q_ask) < quiz_length:
+  File "D:\Python Stuff\renpy-7.0.0-sdk\renpy\execution.py", line 58, in check_infinite_loop
+    raise Exception("Possible infinite loop.")
+Exception: Possible infinite loop.
 
 Windows-8-6.2.9200
 Ren'Py 7.0.0.196
 Club Time Saga 1.0
-Wed Sep 05 23:12:50 2018
+Thu Sep 06 21:27:23 2018
