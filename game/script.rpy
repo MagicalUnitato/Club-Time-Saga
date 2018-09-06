@@ -108,10 +108,10 @@ label gFirst:
     jump easyQuestions
 label failFirstG:
     y "placeholder girl"
-    jump gSecond
+    jump firstMenuFG
 label failFirstB:
     y "placeholder boi"
-    jump bSecond
+    jump firstMenuFB
 label gSecond:
     scene gSecond
     show hpy clse secg
@@ -121,7 +121,7 @@ label gSecond:
     gs "Don't expect it again from me."
     y "I probably won't."
     gs "Would you still like to continue?"
-menu:
+menu firstMenuFG:
     "Sure, why not.":
         show hpy clse secg
         gs "Hmm, you could've said no."
@@ -169,7 +169,7 @@ label bSecond:
     bs "Hey [name]! You made it to the next round!"
     y "Thanks?"
     bs "Would you still like to continue?"
-menu:
+menu firstMenuFB:
     "Sure.":
         show hpy clse secb
         bs "Great! However, for the next round our Vice President will be the one to ask you the questions."
@@ -220,10 +220,10 @@ menu:
         jump mediumQuestions
 label failSecondG:
     y "placeholder girl"
-    jump gThird
+    jump secondMenuFG
 label failSecondB:
     y "placeholder boi"
-    jump bThird
+    jump secondMenuFB
 label gThird:
     show hpy opn vpg
     with fade
@@ -236,7 +236,7 @@ label gThird:
     gvp "Yes, don't worry about me, I'll be fine."
     y "Oh okay."
     gvp "So, are you ready for the final round?"
-menu:
+menu secondMenuFG:
     "Why not?":
         show hpy opn vpg
         gvp "Perfect!"
@@ -312,7 +312,7 @@ label bThird:
     bvp "I'm impressed with your progress, just one more round before you finish game."
     y "Game? What game?"
     bvp "I meant quiz, sorry. Are you ready for the final round?"
-menu:
+menu secondMenuFB:
     "I've made it this far.":
         show hpy opn vpb
         bvp "That's good to hear! However, for this last round...."

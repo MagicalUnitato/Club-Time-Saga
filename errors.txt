@@ -2,9 +2,8 @@
 errors listed below, and try again.
 
 
-The label testLanderH is defined twice, at
-  File "game/scoreboard.rpy", line 1 and
-  File "game/script.rpy", line 117.
+File "game/mediumLevel.rpy", line 4: is not terminated with a newline. (Check strings and parenthesis.)
+        $ mediumQuestions = [
 
 Ren'Py Version: Ren'Py 7.0.0.196
-Sun Sep 02 10:55:01 2018
+Thu Sep 06 22:20:20 2018
