@@ -106,10 +106,16 @@ label gFirst:
     gs "The first question will be..."
     jump easyQuestions
 label failFirstG:
-    y "placeholder girl"
+    gs "I actually expected you'd fail."
+    y "Gee, thanks."
+    gs "No matter, you'd probably do better on the next round, though I won't be surprised if you didn't."
+    gs "Would you still like to continue?"
     jump firstMenuFG
 label failFirstB:
-    y "placeholder boi"
+    bs "Hmm, you didn't do so well on this round."
+    y "I noticed."
+    bs "No matter. You may do better on the next round."
+    bs "Would you still like to continue?"
     jump firstMenuFB
 label gSecond:
     scene gSecond
@@ -218,10 +224,18 @@ menu firstMenuFB:
         bvp "Let's start this off with the first item..."
         jump mediumQuestions
 label failSecondG:
-    y "placeholder girl"
+    gvp "Aww thats too bad, you didn't pass."
+    y "I'm not that smart. Sorry."
+    gvp "It's okay! Maybe you'll do better next round!"
+    y "Maybe."
+    gvp "Are you ready for the final round?"
     jump secondMenuFG
 label failSecondB:
-    y "placeholder boi"
+    bvp "Your efforts have been wasted on my quiz."
+    bvp "Such a pity."
+    y "I did not meet your standards apparently."
+    bvp "No matter, you may do better in the final round."
+    bvp "Are you ready for the final round?"
     jump secondMenuFB
 label gThird:
     show hpy opn vpg
@@ -355,9 +369,3 @@ menu secondMenuFB:
         y "Uhm, it's nice to see you putting yourself in high regard?"
         bp "Yep! Now, let us start with the first question..."
         jump hardQuestions
-label failThirdG:
-    y "placeholder girl"
-    jump testLanderH
-label failThirdB:
-    y "placeholder boi"
-    jump testLanderH
