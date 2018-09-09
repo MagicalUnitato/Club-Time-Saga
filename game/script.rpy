@@ -33,7 +33,7 @@ label school:
     while len(name) <= 0 :
         t "You didn't tell me your name yet."
         $ name = renpy.input("I'm")
-    y "I apologize for being late Sir."
+    y "I apologize for being late Ma'am."
     t "Since it's the first day, you're excused."
 menu:
     "Choose your preference:"
@@ -197,9 +197,9 @@ menu firstMenuFB:
         "*walks over to said boy who seems to be busy looking at his phone*"
         y "Excuse me."
         "*boy looks up towards you*"
-        hide hpy clse secb 
+        hide hpy clse secb
         with dissolve
-        hide sad clse secb 
+        hide sad clse secb
         with dissolve
         show hpy clse vpb
         with fade
@@ -225,9 +225,9 @@ menu firstMenuFB:
         "*walks over to said boy who seems to be busy looking at his phone*"
         y "Excuse me."
         "*boy looks up towards you*"
-        hide hpy clse secb 
+        hide hpy clse secb
         with dissolve
-        hide sad clse secb 
+        hide sad clse secb
         with dissolve
         show hpy clse vpb
         with fade
