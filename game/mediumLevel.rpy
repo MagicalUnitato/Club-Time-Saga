@@ -74,26 +74,74 @@ label mediumQuestions:
             "[ans_0]":
                 if b[0][1] == "right":
                     $ quizPointsM += 1
+                    if gender == "male":
+                        hide sad clse vpb
+                        show hpy clse vpb
+                    elif gender == "female":
+                        hide sad clse vpg
+                        show hpy clse vpg
                     "That's Correct"
                 else:
+                    if gender == "male":
+                        hide hpy clse vpb
+                        show sad clse vpb
+                    elif gender == "female":
+                        hide hpy clse vpb
+                        show sad clse vpg
                     "Wrong"
             "[ans_1]":
                 if b[1][1] == "right":
                     $ quizPointsM += 1
+                    if gender == "male":
+                        hide sad clse vpb
+                        show hpy clse vpb
+                    elif gender == "female":
+                        hide sad clse vpg
+                        show hpy clse vpg
                     "That's Correct"
                 else:
+                    if gender == "male":
+                        hide hpy clse vpb
+                        show sad clse vpb
+                    elif gender == "female":
+                        hide hpy clse vpb
+                        show sad clse vpg
                     "Wrong"
             "[ans_2]":
                 if b[2][1] == "right":
                     $ quizPointsM += 1
+                    if gender == "male":
+                        hide sad clse vpb
+                        show hpy clse vpb
+                    elif gender == "female":
+                        hide sad clse vpg
+                        show hpy clse vpg
                     "That's Correct"
                 else:
+                    if gender == "male":
+                        hide hpy clse vpb
+                        show sad clse vpb
+                    elif gender == "female":
+                        hide hpy clse vpb
+                        show sad clse vpg
                     "Wrong"
             "[ans_3]":
                 if b[3][1] == "right":
                     $ quizPointsM += 1
+                    if gender == "male":
+                        hide sad clse vpb
+                        show hpy clse vpb
+                    elif gender == "female":
+                        hide sad clse vpg
+                        show hpy clse vpg
                     "That's Correct"
                 else:
+                    if gender == "male":
+                        hide hpy clse vpb
+                        show sad clse vpb
+                    elif gender == "female":
+                        hide hpy clse vpb
+                        show sad clse vpg
                     "Wrong"
         $ quiz_length -= 1
         if quiz_length > 0:

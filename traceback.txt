@@ -1,20 +1,20 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/hardLevel.rpy", line 28, in script
+  File "game/easyLevel.rpy", line 24, in script
     while len(q_ask) < quiz_length:
 Exception: Possible infinite loop.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/hardLevel.rpy", line 28, in script
+  File "game/easyLevel.rpy", line 24, in script
     while len(q_ask) < quiz_length:
-  File "D:\Python Stuff\renpy-7.0.0-sdk\renpy\execution.py", line 58, in check_infinite_loop
+  File "G:\Python Stuff\renpy-7.0.0-sdk\renpy\execution.py", line 58, in check_infinite_loop
     raise Exception("Possible infinite loop.")
 Exception: Possible infinite loop.
 
 Windows-8-6.2.9200
 Ren'Py 7.0.0.196
 Club Time Saga 1.0
-Thu Sep 06 21:27:23 2018
+Fri Sep 07 10:02:50 2018

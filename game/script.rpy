@@ -14,14 +14,19 @@ define gp = Character("Ella")
 define p = Character("President")
 define t = Character("Teacher")
 define a = Character("Alone")
-image test movie = Movie(channel="test", play="images/clock.mkv", mask="images/clock.mkv", delay=30)
+image test movie = Movie(channel="test", play="images/clock.mkv", delay=30)
 label start:
     stop music
+    scene bedroom
     "*alarm rings*"
     "*wakes up*"
+    show hand phone
+    with fade
     "Oh no! I'm late for school"
 label school:
     scene schoolInit
+    show teacher opn
+    with fade
     t "You! New Comer! You're late! What's your name?"
     $ name = renpy.input("I'm")
     $ name = name.strip()
@@ -97,7 +102,7 @@ label gFirst:
     show nrm opn secg
     with fade
     y "Hello, I'm..."
-    gs "You're name is [name], I know already."
+    gs "Your name is [name], I know already."
     y "Um..."
     gs "Look, all you need to know is people call me Ysa."
     gs "I'll be the one to ask you the questions for the easy round because I'm the Secretary of this club."
@@ -134,7 +139,10 @@ menu firstMenuFG:
         "*walks over to said girl who is busy arranging some papers on the table*"
         y "Excuse me, Beatrice."
         "*said girl looks up towards you"
-        hide hpy clse secb dissolve
+        hide hpy clse secg
+        with dissolve
+        hide sad clse secg
+        with dissolve
         show hpy clse vpg
         with fade
         gvp "Oh hello! I guess you know my name from Ysa."
@@ -154,7 +162,10 @@ menu firstMenuFG:
         "*walks over to said girl who is busy arranging some papers on the table*"
         y "Excuse me, Beatrice."
         "*said girl looks up towards you"
-        hide hpy clse secb dissolve
+        hide hpy clse secg
+        with dissolve
+        hide sad clse secg
+        with dissolve
         show nrm clse vpg
         with fade
         gvp "Oh hello! I guess you know my name from Ysa."
@@ -180,8 +191,10 @@ menu firstMenuFB:
         "*walks over to said boy who seems to be busy looking at his phone*"
         y "Excuse me."
         "*boy looks up towards you*"
-        hide hpy clse secb dissolve
-        hide sad clse secb dissolve
+        hide hpy clse secb 
+        with dissolve
+        hide sad clse secb 
+        with dissolve
         show hpy clse vpb
         with fade
         bvp "Oh! My apologies, I didn't notice someone walking up in front of me."
@@ -206,8 +219,10 @@ menu firstMenuFB:
         "*walks over to said boy who seems to be busy looking at his phone*"
         y "Excuse me."
         "*boy looks up towards you*"
-        hide nrm clse secb dissolve
-        hide sad clse secb dissolve
+        hide hpy clse secb 
+        with dissolve
+        hide sad clse secb 
+        with dissolve
         show hpy clse vpb
         with fade
         bvp "Oh! My apologies, I didn't notice someone walking up in front of me."

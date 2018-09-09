@@ -71,30 +71,74 @@ label easyQuestions:
                 if b[0][1] == "right":
                     $ quizPointsE += 1
                     "That's Correct"
+                    if gender == "male":
+                        hide sad clse secb
+                        show hpy clse secb
+                    elif gender == "female":
+                        hide sad clse secg
+                        show hpy clse secg
                 else:
                     if gender == "male":
+                        hide hpy clse secb
                         show sad clse secb
                     elif gender == "female":
+                        hide hpy clse secb
                         show sad clse secg
                     "Wrong"
             "[ans_1]":
                 if b[1][1] == "right":
                     $ quizPointsE += 1
                     "That's Correct"
+                    if gender == "male":
+                        hide sad clse secb
+                        show hpy clse secb
+                    elif gender == "female":
+                        hide sad clse secg
+                        show hpy clse secg
                 else:
                     "Wrong"
+                    if gender == "male":
+                        hide hpy clse secb
+                        show sad clse secb
+                    elif gender == "female":
+                        hide hpy clse secb
+                        show sad clse secg
             "[ans_2]":
                 if b[2][1] == "right":
                     $ quizPointsE += 1
                     "That's Correct"
+                    if gender == "male":
+                        hide sad clse secb
+                        show hpy clse secb
+                    elif gender == "female":
+                        hide sad clse secg
+                        show hpy clse secg
                 else:
                     "Wrong"
+                    if gender == "male":
+                        hide hpy clse secb
+                        show sad clse secb
+                    elif gender == "female":
+                        hide hpy clse secb
+                        show sad clse secg
             "[ans_3]":
                 if b[3][1] == "right":
                     $ quizPointsE += 1
                     "That's Correct"
+                    if gender == "male":
+                        hide sad clse secb
+                        show hpy clse secb
+                    elif gender == "female":
+                        hide sad clse secg
+                        show hpy clse secg
                 else:
                     "Wrong"
+                    if gender == "male":
+                        hide hpy clse secb
+                        show sad clse secb
+                    elif gender == "female":
+                        hide hpy clse secb
+                        show sad clse secg
         $ quiz_length -= 1
         if quiz_length > 0:
             jump quize_game

@@ -75,24 +75,66 @@ label hardQuestions:
             "[ans_0]":
                 if b[0][1] == "right":
                     $ quizPointsH += 1
+                    if gender == "male":
+                        hide sad clse presb
+                        show hpy clse presb
+                    elif gender == "female":
+                        hide sad clse presg
+                        show hpy clse presg
                     "That's Correct"
                 else:
+                    if gender == "male":
+                        hide hpy clse presb
+                        show sad clse presb
+                    elif gender == "female":
+                        hide hpy clse presb
+                        show sad clse presg
                     "Wrong"
             "[ans_1]":
                 if b[1][1] == "right":
                     $ quizPointsH += 1
+                    if gender == "male":
+                        hide sad clse presb
+                        show hpy clse presb
+                    elif gender == "female":
+                        hide sad clse presg
+                        show hpy clse presg
                     "That's Correct"
                 else:
+                    if gender == "male":
+                        hide hpy clse presb
+                        show sad clse presb
+                    elif gender == "female":
+                        hide hpy clse presb
+                        show sad clse presg
                     "Wrong"
             "[ans_2]":
                 if b[2][1] == "right":
                     $ quizPointsH += 1
+                    if gender == "male":
+                        hide sad clse presb
+                        show hpy clse presb
+                    elif gender == "female":
+                        hide sad clse presg
+                        show hpy clse presg
                     "That's Correct"
                 else:
+                    if gender == "male":
+                        hide hpy clse presb
+                        show sad clse presb
+                    elif gender == "female":
+                        hide hpy clse presb
+                        show sad clse presg
                     "Wrong"
             "[ans_3]":
                 if b[3][1] == "right":
                     $ quizPointsH += 1
+                    if gender == "male":
+                        hide sad clse presb
+                        show hpy clse presb
+                    elif gender == "female":
+                        hide sad clse presg
+                        show hpy clse presg
                     "That's Correct"
                 else:
                     "Wrong"
