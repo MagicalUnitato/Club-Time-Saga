@@ -1,22 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/hardLevel.rpy", line 151, in script
-    jump failThirdG
-ScriptError: could not find label 'failThirdG'.
+  File "game/scoreboard.rpy", line 2, in script
+    $ finalScore = quizPointsE + quizPointsM + quizPointsH
+  File "game/scoreboard.rpy", line 2, in <module>
+    $ finalScore = quizPointsE + quizPointsM + quizPointsH
+NameError: name 'quizPointsE' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/hardLevel.rpy", line 151, in script
-    jump failThirdG
-  File "C:\Users\bpmsalvador\Desktop\Bryce\Python\renpy-7.0.0-sdk\renpy\ast.py", line 1600, in execute
-    rv = renpy.game.script.lookup(target)
-  File "C:\Users\bpmsalvador\Desktop\Bryce\Python\renpy-7.0.0-sdk\renpy\script.py", line 873, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'failThirdG'.
+  File "game/scoreboard.rpy", line 2, in script
+    $ finalScore = quizPointsE + quizPointsM + quizPointsH
+  File "G:\Python Stuff\renpy-7.0.0-sdk\renpy\ast.py", line 862, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "G:\Python Stuff\renpy-7.0.0-sdk\renpy\python.py", line 1912, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/scoreboard.rpy", line 2, in <module>
+    $ finalScore = quizPointsE + quizPointsM + quizPointsH
+NameError: name 'quizPointsE' is not defined
 
 Windows-8-6.2.9200
 Ren'Py 7.0.0.196
 Club Time Saga 1.0
-Mon Sep 10 11:22:45 2018
+Mon Sep 10 14:07:17 2018

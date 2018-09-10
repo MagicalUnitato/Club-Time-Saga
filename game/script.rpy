@@ -17,7 +17,7 @@ define a = Character("Alone")
 image test movie = Movie(channel="test", play="images/clock.mkv", delay=30)
 label start:
     stop music
-    scene bedroom
+    scene bedroom #show bedroom ceiling here
     "*alarm rings*"
     "*wakes up*"
     show hand phone
