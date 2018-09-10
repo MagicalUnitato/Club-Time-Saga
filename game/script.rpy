@@ -54,7 +54,7 @@ label watchFF:
     y "That was the most exhausting experience of my life! And NOW, I have to attend club."
     y "Crap! I still have to find the club room."
 label clubTime:
-    scene clubTime
+    scene classroom
     if gender == "male":
         show nrm opn presb
         with fade
@@ -87,7 +87,7 @@ label clubFill2:
     elif gender == "female":
         jump gFirst
 label bFirst:
-    scene bFirst
+    scene classroom
     show nrm opn secb
     with fade
     bs "Hi [name]."
@@ -98,7 +98,7 @@ label bFirst:
     bs "So the first question is..."
     jump easyQuestions
 label gFirst:
-    scene gFirst
+    scene classroom
     show nrm opn secg
     with fade
     y "Hello, I'm..."
@@ -133,6 +133,7 @@ label gSecond:
     gs "Would you still like to continue?"
 menu firstMenuFG:
     "Sure, why not.":
+        scene classroom
         show hpy clse secg
         gs "Hmm, you could've said no."
         y "Why?"
@@ -145,6 +146,7 @@ menu firstMenuFG:
         "*walks over to said girl who is busy arranging some papers on the table*"
         y "Excuse me, Beatrice."
         "*said girl looks up towards you"
+        hide hpy opn secg
         hide hpy clse secg
         with dissolve
         hide sad clse secg
@@ -156,6 +158,7 @@ menu firstMenuFG:
         gvp "Good, Let's start off with the first question..."
         jump mediumQuestions
     "May I go?":
+        scene classroom
         show nrm clse secg
         gs "Who says you can?"
         y "But I..."
@@ -187,6 +190,7 @@ label bSecond:
     bs "Would you still like to continue?"
 menu firstMenuFB:
     "Sure.":
+        scene classroom
         show hpy clse secb
         bs "Great! However, for the next round our Vice President will be the one to ask you the questions."
         y "Who?"
@@ -211,6 +215,7 @@ menu firstMenuFB:
         bvp "Let's start this off with the first item..."
         jump mediumQuestions
     "Uhm...I'm sorry but I kinda have to go.":
+        scene classroom
         show nrm clse secb
         bs "Go where?"
         y "Uhm..."
@@ -266,6 +271,7 @@ label gThird:
     gvp "So, are you ready for the final round?"
 menu secondMenuFG:
     "Why not?":
+        scene classroom
         show hpy opn vpg
         gvp "Perfect!"
         gvp "It's good that you're willing to continue!"
@@ -299,6 +305,7 @@ menu secondMenuFG:
         y "Now, lets begin with the first question..."
         jump hardQuestions
     "No thanks.":
+        scene classroom
         show hpy opn vpg
         gvp "Hey, this will be the last round, so don't give up yet."
         gvp "Don't worry, you'll do fine."
@@ -342,6 +349,7 @@ label bThird:
     bvp "I meant quiz, sorry. Are you ready for the final round?"
 menu secondMenuFB:
     "I've made it this far.":
+        scene classroom
         show hpy opn vpb
         bvp "That's good to hear! However, for this last round...."
         bvp "Our president will be the one to ask the questions."
@@ -362,6 +370,7 @@ menu secondMenuFB:
         bp "Yep! Now, let us start with the first question..."
         jump hardQuestions
     "I'm tired.":
+        scene classroom
         show nrm opn vpb
         bvp "Hey, don't give up now."
         bvp "Don't worry, this will be the last round."
@@ -384,3 +393,21 @@ menu secondMenuFB:
         y "Uhm, it's nice to see you putting yourself in high regard?"
         bp "Yep! Now, let us start with the first question..."
         jump hardQuestions
+label failThirdB:
+    hide hpy clse presb
+    show sad clse presb
+    bp "Aww man, that's too bad. You didn't finish the hard part of the quiz"
+    y "Dang, so close"
+    bp "You could've tried harder."
+    y "Sorry."
+    bp "It's alright, let's just see the tally of all your quiz scores..."
+    jump testLanderH
+label failThirdG:
+    hide hpy clse presb
+    show sad clse presg
+    gp "Um, your quiz score didn't um...meet the standards of this round."
+    y "Oh."
+    gp "I'm sorry...the quiz might have been too hard for you."
+    y "It's my fault. Sorry."
+    gp "It's alright, let's just see the tally of all your quiz scores..."
+    jump testLanderH

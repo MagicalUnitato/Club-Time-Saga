@@ -1,20 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/easyLevel.rpy", line 24, in script
-    while len(q_ask) < quiz_length:
-Exception: Possible infinite loop.
+  File "game/hardLevel.rpy", line 151, in script
+    jump failThirdG
+ScriptError: could not find label 'failThirdG'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/easyLevel.rpy", line 24, in script
-    while len(q_ask) < quiz_length:
-  File "G:\Python Stuff\renpy-7.0.0-sdk\renpy\execution.py", line 58, in check_infinite_loop
-    raise Exception("Possible infinite loop.")
-Exception: Possible infinite loop.
+  File "game/hardLevel.rpy", line 151, in script
+    jump failThirdG
+  File "C:\Users\bpmsalvador\Desktop\Bryce\Python\renpy-7.0.0-sdk\renpy\ast.py", line 1600, in execute
+    rv = renpy.game.script.lookup(target)
+  File "C:\Users\bpmsalvador\Desktop\Bryce\Python\renpy-7.0.0-sdk\renpy\script.py", line 873, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'failThirdG'.
 
 Windows-8-6.2.9200
 Ren'Py 7.0.0.196
 Club Time Saga 1.0
-Fri Sep 07 10:02:50 2018
+Mon Sep 10 11:22:45 2018
