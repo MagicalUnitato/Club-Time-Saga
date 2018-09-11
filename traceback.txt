@@ -1,26 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/scoreboard.rpy", line 2, in script
-    $ finalScore = quizPointsE + quizPointsM + quizPointsH
-  File "game/scoreboard.rpy", line 2, in <module>
-    $ finalScore = quizPointsE + quizPointsM + quizPointsH
-NameError: name 'quizPointsE' is not defined
+  File "game/script.rpy", line 23, in script
+    show hand phone with fadein (10.0)
+  File "game/script.rpy", line 23, in <module>
+    show hand phone with fadein (10.0)
+NameError: name 'fadein' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/scoreboard.rpy", line 2, in script
-    $ finalScore = quizPointsE + quizPointsM + quizPointsH
-  File "G:\Python Stuff\renpy-7.0.0-sdk\renpy\ast.py", line 862, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "G:\Python Stuff\renpy-7.0.0-sdk\renpy\python.py", line 1912, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "game/scoreboard.rpy", line 2, in <module>
-    $ finalScore = quizPointsE + quizPointsM + quizPointsH
-NameError: name 'quizPointsE' is not defined
+  File "game/script.rpy", line 23, in script
+    show hand phone with fadein (10.0)
+  File "G:\Python Stuff\renpy-7.0.0-sdk\renpy\ast.py", line 1333, in execute
+    paired = renpy.python.py_eval(self.paired)
+  File "G:\Python Stuff\renpy-7.0.0-sdk\renpy\python.py", line 1943, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "G:\Python Stuff\renpy-7.0.0-sdk\renpy\python.py", line 1936, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 23, in <module>
+    show hand phone with fadein (10.0)
+NameError: name 'fadein' is not defined
 
 Windows-8-6.2.9200
 Ren'Py 7.0.0.196
 Club Time Saga 1.0
-Mon Sep 10 14:07:17 2018
+Tue Sep 11 15:41:44 2018

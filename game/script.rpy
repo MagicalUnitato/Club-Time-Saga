@@ -62,8 +62,8 @@ label clubTime:
         show nrm opn presg
         with fade
     p "Welcome to the first meeting of the STEM Club! As the president of this club, I made a quiz bowl for you to enjoy!"
-    p "This quiz has three levels:"
-    p "Easy, Moderate and Difficult."
+    p "This quiz has twenty levels:"
+    p "Easy, Moderate, Moderate, Moderate, Moderate, Moderate, Moderate, Moderate, Moderate, Moderate, Moderate, Moderate, Moderate, Moderate, Moderate, Moderate, Moderate, Moderate, Moderate, and Difficult."
     p "Don’t worry, this game is just for fun! However, if you do manage to pass, you will be rewarded by the end of the game!"
     p "Are you ready?"
 menu :
