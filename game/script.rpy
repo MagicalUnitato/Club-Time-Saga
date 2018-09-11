@@ -4,6 +4,15 @@
 # Deadline by Friday 9/7/18
 # Complete Art deadline by 9/10/18
 # Noted on 9/5/18
+init python:
+  def eyewarp(x):
+    return x**1.33
+  eye_open = ImageDissolve("eye.png", .5, ramplen=128, reverse=False, time_warp=eyewarp)
+  eye_shut = ImageDissolve("eye.png", .5, ramplen=128, reverse=True, time_warp=eyewarp)
+image black:
+  Solid("#000")
+image white:
+  Solid("#FFF")
 define y = Character("[name]")
 define bs = Character("Dava")
 define gs = Character("Ysa")
@@ -17,14 +26,22 @@ define a = Character("Alone")
 image test movie = Movie(channel="test", play="images/clock.mkv", delay=30)
 label start:
     stop music
-    scene bedroom #show bedroom ceiling here
+    scene black
+    with fade
+    scene bedroom ceiling
+    with eye_open
+    play sound "sounds/alarm.wav"
     "*alarm rings*"
+    scene bedroom
+    with fade
     "*wakes up*"
     show hand phone
     with fade
     "Oh no! I'm late for school"
+    stop sound
 label school:
-    scene schoolInit
+    play sound "sounds/school_bell.wav" fadein 1.0
+    scene classe middle blurred
     show teacher opn
     with fade
     t "You! New Comer! You're late! What's your name?"
@@ -35,6 +52,8 @@ label school:
         $ name = renpy.input("I'm")
     y "I apologize for being late Ma'am."
     t "Since it's the first day, you're excused."
+    stop sound
+    play music "sounds/jazz.mp3" fadein 5.0
 menu:
     "Choose your preference:"
     "Boy":
@@ -47,14 +66,16 @@ label watchFF:
     scene test movie
     with fade
     "The day passes by quickly"
-    scene hallway
+    stop sound
+    scene classe middle blurred
     with fade
     y "I can't believe that I have Pre-Calculus as a last subject."
     y "Ughh."
     y "That was the most exhausting experience of my life! And NOW, I have to attend club."
     y "Crap! I still have to find the club room."
+
 label clubTime:
-    scene classroom
+    scene classe middle
     if gender == "male":
         show nrm opn presb
         with fade
@@ -62,8 +83,8 @@ label clubTime:
         show nrm opn presg
         with fade
     p "Welcome to the first meeting of the STEM Club! As the president of this club, I made a quiz bowl for you to enjoy!"
-    p "This quiz has twenty levels:"
-    p "Easy, Moderate, Moderate, Moderate, Moderate, Moderate, Moderate, Moderate, Moderate, Moderate, Moderate, Moderate, Moderate, Moderate, Moderate, Moderate, Moderate, Moderate, Moderate, and Difficult."
+    p "This quiz has three levels:"
+    p "Easy, Moderate and Difficult."
     p "Don’t worry, this game is just for fun! However, if you do manage to pass, you will be rewarded by the end of the game!"
     p "Are you ready?"
 menu :
@@ -123,7 +144,7 @@ label failFirstB:
     bs "Would you still like to continue?"
     jump firstMenuFB
 label gSecond:
-    scene gSecond
+    scene classe middle
     show hpy clse secg
     with fade
     gs "Wow [name], I actually didn't expect you to make it to the next round!"
@@ -133,7 +154,7 @@ label gSecond:
     gs "Would you still like to continue?"
 menu firstMenuFG:
     "Sure, why not.":
-        scene classroom
+        scene classe middle
         show hpy clse secg
         gs "Hmm, you could've said no."
         y "Why?"
@@ -158,7 +179,7 @@ menu firstMenuFG:
         gvp "Good, Let's start off with the first question..."
         jump mediumQuestions
     "May I go?":
-        scene classroom
+        scene classe middle
         show nrm clse secg
         gs "Who says you can?"
         y "But I..."
@@ -190,7 +211,7 @@ label bSecond:
     bs "Would you still like to continue?"
 menu firstMenuFB:
     "Sure.":
-        scene classroom
+        scene classe middle
         show hpy clse secb
         bs "Great! However, for the next round our Vice President will be the one to ask you the questions."
         y "Who?"
@@ -271,7 +292,7 @@ label gThird:
     gvp "So, are you ready for the final round?"
 menu secondMenuFG:
     "Why not?":
-        scene classroom
+        scene classe corner
         show hpy opn vpg
         gvp "Perfect!"
         gvp "It's good that you're willing to continue!"
@@ -305,7 +326,7 @@ menu secondMenuFG:
         y "Now, lets begin with the first question..."
         jump hardQuestions
     "No thanks.":
-        scene classroom
+        scene classe corner
         show hpy opn vpg
         gvp "Hey, this will be the last round, so don't give up yet."
         gvp "Don't worry, you'll do fine."
@@ -349,7 +370,7 @@ label bThird:
     bvp "I meant quiz, sorry. Are you ready for the final round?"
 menu secondMenuFB:
     "I've made it this far.":
-        scene classroom
+        scene classe corner
         show hpy opn vpb
         bvp "That's good to hear! However, for this last round...."
         bvp "Our president will be the one to ask the questions."
@@ -370,7 +391,7 @@ menu secondMenuFB:
         bp "Yep! Now, let us start with the first question..."
         jump hardQuestions
     "I'm tired.":
-        scene classroom
+        scene classe corner
         show nrm opn vpb
         bvp "Hey, don't give up now."
         bvp "Don't worry, this will be the last round."

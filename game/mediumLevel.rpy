@@ -1,5 +1,14 @@
 label mediumQuestions:
-    $ timeout = 15
+    scene classe middle blurred
+    if gender == "male":
+        hide hpy clse vpb
+        show nrm opn vpb at right
+        with fade
+    elif gender == "female":
+        hide hpy clse vpg
+        show nrm opn vpg at right
+        with fade
+    $ timeout = 30
     $ timeout_label = "noAnswerM"
     $ mediumQuestions = [
         {"question": "Who designed the first analytical engine?" , "answer" : [["Charles Babbage " , "right"] , ["Guglielmo Marconi" , "wrong"] , ["Nikola tesla" , "wrong"] ,["Philo Taylor Fransworth" , "wrong"]]},
@@ -76,72 +85,72 @@ label mediumQuestions:
                     $ quizPointsM += 1
                     if gender == "male":
                         hide sad clse vpb
-                        show hpy clse vpb
+                        show hpy clse vpb at right
                     elif gender == "female":
                         hide sad clse vpg
-                        show hpy clse vpg
+                        show hpy clse vpg at right
                     "That's Correct"
                 else:
                     if gender == "male":
                         hide hpy clse vpb
-                        show sad clse vpb
+                        show sad clse vpb at right
                     elif gender == "female":
                         hide hpy clse vpb
-                        show sad clse vpg
+                        show sad clse vpg at right
                     "Wrong"
             "[ans_1]":
                 if b[1][1] == "right":
                     $ quizPointsM += 1
                     if gender == "male":
                         hide sad clse vpb
-                        show hpy clse vpb
+                        show hpy clse vpb at right
                     elif gender == "female":
                         hide sad clse vpg
-                        show hpy clse vpg
+                        show hpy clse vpg at right
                     "That's Correct"
                 else:
                     if gender == "male":
                         hide hpy clse vpb
-                        show sad clse vpb
+                        show sad clse vpb at right
                     elif gender == "female":
                         hide hpy clse vpb
-                        show sad clse vpg
+                        show sad clse vpg at right
                     "Wrong"
             "[ans_2]":
                 if b[2][1] == "right":
                     $ quizPointsM += 1
                     if gender == "male":
                         hide sad clse vpb
-                        show hpy clse vpb
+                        show hpy clse vpb at right
                     elif gender == "female":
                         hide sad clse vpg
-                        show hpy clse vpg
+                        show hpy clse vpg at right
                     "That's Correct"
                 else:
                     if gender == "male":
                         hide hpy clse vpb
-                        show sad clse vpb
+                        show sad clse vpb at right
                     elif gender == "female":
                         hide hpy clse vpb
-                        show sad clse vpg
+                        show sad clse vpg at right
                     "Wrong"
             "[ans_3]":
                 if b[3][1] == "right":
                     $ quizPointsM += 1
                     if gender == "male":
                         hide sad clse vpb
-                        show hpy clse vpb
+                        show hpy clse vpb at right
                     elif gender == "female":
                         hide sad clse vpg
-                        show hpy clse vpg
+                        show hpy clse vpg at right
                     "That's Correct"
                 else:
                     if gender == "male":
                         hide hpy clse vpb
-                        show sad clse vpb
+                        show sad clse vpb at right
                     elif gender == "female":
                         hide hpy clse vpb
-                        show sad clse vpg
+                        show sad clse vpg at right
                     "Wrong"
         $ quiz_length -= 1
         if quiz_length > 0:

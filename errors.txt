@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 26: end of line expected.
-    label school:e
-                 ^
+File "game/script.rpy", line 41: expected end of line
+    stop music with fade 0.5
+               ^
 
 Ren'Py Version: Ren'Py 7.0.0.196
-Tue Sep 11 15:39:10 2018
+Wed Sep 12 00:31:29 2018

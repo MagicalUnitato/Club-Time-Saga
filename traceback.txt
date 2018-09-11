@@ -1,28 +1,56 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 23, in script
-    show hand phone with fadein (10.0)
-  File "game/script.rpy", line 23, in <module>
-    show hand phone with fadein (10.0)
-NameError: name 'fadein' is not defined
+  File "game/script.rpy", line 34, in script
+    "*alarm rings*"
+  File "renpy/common/000window.rpy", line 98, in _window_auto_callback
+    _window_show()
+  File "renpy/common/000window.rpy", line 60, in _window_show
+    renpy.with_statement(trans)
+IOError: Couldn't find file 'alarm.mp3'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 23, in script
-    show hand phone with fadein (10.0)
-  File "G:\Python Stuff\renpy-7.0.0-sdk\renpy\ast.py", line 1333, in execute
-    paired = renpy.python.py_eval(self.paired)
-  File "G:\Python Stuff\renpy-7.0.0-sdk\renpy\python.py", line 1943, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "G:\Python Stuff\renpy-7.0.0-sdk\renpy\python.py", line 1936, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 23, in <module>
-    show hand phone with fadein (10.0)
-NameError: name 'fadein' is not defined
+  File "D:\Python Stuff\renpy-7.0.0-sdk\renpy\bootstrap.py", line 306, in bootstrap
+    renpy.main.main()
+  File "D:\Python Stuff\renpy-7.0.0-sdk\renpy\main.py", line 513, in main
+    run(restart)
+  File "D:\Python Stuff\renpy-7.0.0-sdk\renpy\main.py", line 139, in run
+    renpy.execution.run_context(True)
+  File "D:\Python Stuff\renpy-7.0.0-sdk\renpy\execution.py", line 879, in run_context
+    context.run()
+  File "game/script.rpy", line 34, in script
+    "*alarm rings*"
+  File "D:\Python Stuff\renpy-7.0.0-sdk\renpy\ast.py", line 618, in execute
+    statement_name("say")
+  File "D:\Python Stuff\renpy-7.0.0-sdk\renpy\ast.py", line 43, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 98, in _window_auto_callback
+    _window_show()
+  File "renpy/common/000window.rpy", line 60, in _window_show
+    renpy.with_statement(trans)
+  File "D:\Python Stuff\renpy-7.0.0-sdk\renpy\exports.py", line 1452, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "D:\Python Stuff\renpy-7.0.0-sdk\renpy\display\core.py", line 2207, in do_with
+    clear=clear)
+  File "D:\Python Stuff\renpy-7.0.0-sdk\renpy\display\core.py", line 2649, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "D:\Python Stuff\renpy-7.0.0-sdk\renpy\display\core.py", line 3318, in interact_core
+    renpy.audio.audio.periodic()
+  File "D:\Python Stuff\renpy-7.0.0-sdk\renpy\audio\audio.py", line 988, in periodic_thread_main
+    periodic_pass()
+  File "D:\Python Stuff\renpy-7.0.0-sdk\renpy\audio\audio.py", line 932, in periodic_pass
+    c.periodic()
+  File "D:\Python Stuff\renpy-7.0.0-sdk\renpy\audio\audio.py", line 416, in periodic
+    topf = load(self.file_prefix + filename + self.file_suffix)
+  File "D:\Python Stuff\renpy-7.0.0-sdk\renpy\audio\audio.py", line 69, in load
+    rv = renpy.loader.load(fn)
+  File "D:\Python Stuff\renpy-7.0.0-sdk\renpy\loader.py", line 555, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'alarm.mp3'.
 
 Windows-8-6.2.9200
 Ren'Py 7.0.0.196
 Club Time Saga 1.0
-Tue Sep 11 15:41:44 2018
+Wed Sep 12 00:30:48 2018

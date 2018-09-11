@@ -1,5 +1,14 @@
 label hardQuestions:
-    $ timeout = 20
+    scene classe corner blurred
+    if gender == "male":
+        hide hpy opn presb
+        show nrm opn presb at right
+        with fade
+    elif gender == "female":
+        hide hpy opn presg
+        show nrm opn presg at right
+        with fade
+    $ timeout = 60
     $ timeout_label = "noAnswerH"
     $ hardQuestions = [
         {"question": "It is a protocol designed to search, retrieve and display documents from remote sites on the internet." , "answer" : [["Gopher" , "right"] , ["Telnet" , "wrong"] , ["Archie" , "wrong"] ,["Ludwig" , "wrong"]]},
@@ -77,64 +86,64 @@ label hardQuestions:
                     $ quizPointsH += 1
                     if gender == "male":
                         hide sad clse presb
-                        show hpy clse presb
+                        show hpy clse presb at right
                     elif gender == "female":
                         hide sad clse presg
-                        show hpy clse presg
+                        show hpy clse presg at right
                     "That's Correct"
                 else:
                     if gender == "male":
                         hide hpy clse presb
-                        show sad clse presb
+                        show sad clse presb at right
                     elif gender == "female":
                         hide hpy clse presb
-                        show sad clse presg
+                        show sad clse presg at right
                     "Wrong"
             "[ans_1]":
                 if b[1][1] == "right":
                     $ quizPointsH += 1
                     if gender == "male":
                         hide sad clse presb
-                        show hpy clse presb
+                        show hpy clse presb at right
                     elif gender == "female":
                         hide sad clse presg
-                        show hpy clse presg
+                        show hpy clse presg at right
                     "That's Correct"
                 else:
                     if gender == "male":
                         hide hpy clse presb
-                        show sad clse presb
+                        show sad clse presb at right
                     elif gender == "female":
                         hide hpy clse presb
-                        show sad clse presg
+                        show sad clse presg at right
                     "Wrong"
             "[ans_2]":
                 if b[2][1] == "right":
                     $ quizPointsH += 1
                     if gender == "male":
                         hide sad clse presb
-                        show hpy clse presb
+                        show hpy clse presb at right
                     elif gender == "female":
                         hide sad clse presg
-                        show hpy clse presg
+                        show hpy clse presg at right
                     "That's Correct"
                 else:
                     if gender == "male":
                         hide hpy clse presb
-                        show sad clse presb
+                        show sad clse presb at right
                     elif gender == "female":
                         hide hpy clse presb
-                        show sad clse presg
+                        show sad clse presg at right
                     "Wrong"
             "[ans_3]":
                 if b[3][1] == "right":
                     $ quizPointsH += 1
                     if gender == "male":
                         hide sad clse presb
-                        show hpy clse presb
+                        show hpy clse presb at right
                     elif gender == "female":
                         hide sad clse presg
-                        show hpy clse presg
+                        show hpy clse presg at right
                     "That's Correct"
                 else:
                     "Wrong"

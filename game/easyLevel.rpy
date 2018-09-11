@@ -4,7 +4,16 @@ init python:
             random.shuffle(x)
             return x
 label easyQuestions:
-    $ timeout = 10
+    scene classroom blurred
+    if gender == "male":
+        hide nrm opn secb
+        show nrm opn secb at right
+        with fade
+    elif gender == "female":
+        hide nrm opn secg
+        show nrm opn secg at right
+        with fade
+    $ timeout = 20
     $ timeout_label = "noAnswer"
     $ easyQuestions = [
         {"question": "What do you call to the language of computers?" , "answer" : [["Binary language" , "right"] , ["Computing Language" , "wrong"] , ["Pseudocode" , "wrong"] ,["Numerical Language" , "wrong"]]},
@@ -78,17 +87,17 @@ label easyQuestions:
                     "That's Correct"
                     if gender == "male":
                         hide sad clse secb
-                        show hpy clse secb
+                        show hpy clse secb at right
                     elif gender == "female":
                         hide sad clse secg
-                        show hpy clse secg
+                        show hpy clse secg at right
                 else:
                     if gender == "male":
                         hide hpy clse secb
-                        show sad clse secb
+                        show sad clse secb at right
                     elif gender == "female":
                         hide hpy clse secb
-                        show sad clse secg
+                        show sad clse secg at right
                     "Wrong"
             "[ans_1]":
                 if b[1][1] == "right":
@@ -96,54 +105,54 @@ label easyQuestions:
                     "That's Correct"
                     if gender == "male":
                         hide sad clse secb
-                        show hpy clse secb
+                        show hpy clse secb at right
                     elif gender == "female":
                         hide sad clse secg
-                        show hpy clse secg
+                        show hpy clse secg at right
                 else:
                     "Wrong"
                     if gender == "male":
                         hide hpy clse secb
-                        show sad clse secb
+                        show sad clse secb at right
                     elif gender == "female":
                         hide hpy clse secb
-                        show sad clse secg
+                        show sad clse secg at right
             "[ans_2]":
                 if b[2][1] == "right":
                     $ quizPointsE += 1
                     "That's Correct"
                     if gender == "male":
                         hide sad clse secb
-                        show hpy clse secb
+                        show hpy clse secb at right
                     elif gender == "female":
                         hide sad clse secg
-                        show hpy clse secg
+                        show hpy clse secg at right
                 else:
                     "Wrong"
                     if gender == "male":
                         hide hpy clse secb
-                        show sad clse secb
+                        show sad clse secb at right
                     elif gender == "female":
                         hide hpy clse secb
-                        show sad clse secg
+                        show sad clse secg at right
             "[ans_3]":
                 if b[3][1] == "right":
                     $ quizPointsE += 1
                     "That's Correct"
                     if gender == "male":
                         hide sad clse secb
-                        show hpy clse secb
+                        show hpy clse secb at right
                     elif gender == "female":
                         hide sad clse secg
-                        show hpy clse secg
+                        show hpy clse secg at right
                 else:
                     "Wrong"
                     if gender == "male":
                         hide hpy clse secb
-                        show sad clse secb
+                        show sad clse secb at right
                     elif gender == "female":
                         hide hpy clse secb
-                        show sad clse secg
+                        show sad clse secg at right
         $ quiz_length -= 1
         if quiz_length > 0:
             jump quize_game
